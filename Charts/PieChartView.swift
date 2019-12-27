@@ -9,12 +9,23 @@
 import Foundation
 import UIKit
 
-class PieChartView: UIView {
-    public override init(frame: CGRect) {
-        
-    }
+class PieChartView: BaseView {
     
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+    var pieChart = UIView()
+    
+    /*override init() {
+        super.init()
+    }*/
+    
+    public init(radius: Double, backgroundColor: UIColor, x: Double, y: Double) {
+        super.init()
+        pieChart.frame = CGRect(x: x, y: y, width: radius, height: radius)
+        pieChart.backgroundColor = backgroundColor
+        pieChart.layer.cornerRadius = CGFloat(radius) / 2
+        pieChart.layer.masksToBounds = true
+        
+        addSubview(pieChart)
     }
+
+   
 }
