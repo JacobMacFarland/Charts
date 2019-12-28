@@ -13,21 +13,39 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        let pie = PieChartView(radius: 200, backgroundColor: UIColor.red, x: 110, y: 300)
-        self.view.addSubview(pie)
+        //let pie = PieChartView(radius: 200, backgroundColor: UIColor.red, x: 110, y: 300)
         
-        let path = UIBezierPath()
-        path.move(to: CGPoint(x: 50, y: 50))
-        path.addLine(to: CGPoint(x: 100, y: 300))
+        let piePath = UIBezierPath()
+        let center = CGPoint(x: self.view.frame.width / 2, y: self.view.frame.height / 2)
+        let startAngle = CGFloat(180).radians()
+        let endAngle = CGFloat(90).radians()
+        let radius = CGFloat(150)
+        
+        piePath.move(to: center)
+        piePath.addArc(withCenter: center,
+                       radius: radius,
+                       startAngle: startAngle,
+                       endAngle: endAngle,
+                       clockwise: true)
+        piePath.close()
         
         let shapeLayer = CAShapeLayer()
-        shapeLayer.path = path.cgPath
+        shapeLayer.path = piePath.cgPath
         shapeLayer.strokeColor = UIColor.black.cgColor
+        shapeLayer.fillColor = UIColor.orange.cgColor
         shapeLayer.lineWidth = 2
         
-        view.layer.addSublayer(shapeLayer)
+        self.view.layer.addSublayer(shapeLayer)
+
     }
 
 
+}
+
+extension CGFloat {
+    func radians() -> CGFloat {
+        let b = CGFloat(Double.pi) * (self/180)
+        return b
+    }
 }
 
