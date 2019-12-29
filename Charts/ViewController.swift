@@ -13,40 +13,37 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        /*let pieColors = [UIColor.red, UIColor.green, UIColor.gray, UIColor.blue, UIColor.black, UIColor.purple, UIColor.yellow]
-        let data: [Double] = [10, 20, 30, 40, 50, 60, 70]
+        let pieColors = [UIColor.init(rgb: 0x003f5c),
+                         UIColor.init(rgb: 0x58508d),
+                         UIColor.init(rgb: 0xbc5090),
+                         UIColor.init(rgb: 0xff6361),
+                         UIColor.init(rgb: 0xffa600)]
+        
+        let data: [Double] = [10, 15, 20, 25, 30]
         let centerX = Double(self.view.frame.width / 2)
         let centerY = Double(self.view.frame.height / 2)
-        let pie = PieChartView(radius: 100, x: centerX, y: centerY, data: data, colors: pieColors)
-        self.view.addSubview(pie)*/
-        /*let pieColors = [UIColor.red, UIColor.green, UIColor.gray, UIColor.blue, UIColor.black, UIColor.purple, UIColor.yellow]
-        
-        for (index, color) in pieColors.enumerated() {
-            let piePath = UIBezierPath()
-            let center = CGPoint(x: self.view.frame.width / 2, y: self.view.frame.height / 2)
-            let startAngle = CGFloat(Double(index) / 7.0 * 360.0).radians()
-            let endAngle = CGFloat((Double(index) + 1.0) / 7.0 * 360.0).radians()
-            let radius = CGFloat(150)
-            
-            piePath.move(to: center)
-            piePath.addArc(withCenter: center,
-                           radius: radius,
-                           startAngle: startAngle,
-                           endAngle: endAngle,
-                           clockwise: true)
-            piePath.close()
-            
-            let shapeLayer = CAShapeLayer()
-            shapeLayer.path = piePath.cgPath
-            shapeLayer.strokeColor = UIColor.white.cgColor
-            shapeLayer.fillColor = UIColor.orange.cgColor
-            shapeLayer.lineWidth = 4
-            
-            self.view.layer.addSublayer(shapeLayer)
-        }*/
-        let pieChart = PieChartView(radius: 2)
+ 
+        let pieChart = PieChartView(radius: 150, x: centerX, y: centerY, data: data, colors: pieColors, lineWidth: 1)
         self.view.addSubview(pieChart)
     }
 
 
+}
+
+extension UIColor {
+    convenience init(red: Int, green: Int, blue: Int) {
+        assert(red >= 0 && red <= 255, "Invalid red component")
+        assert(green >= 0 && green <= 255, "Invalid green component")
+        assert(blue >= 0 && blue <= 255, "Invalid blue component")
+        
+        self.init(red: CGFloat(red) / 255.0, green: CGFloat(green) / 255.0, blue: CGFloat(blue) / 255.0, alpha: 1.0)
+    }
+    
+    convenience init(rgb: Int) {
+        self.init(
+            red: (rgb >> 16) & 0xFF,
+            green: (rgb >> 8) & 0xFF,
+            blue: rgb & 0xFF
+        )
+    }
 }
