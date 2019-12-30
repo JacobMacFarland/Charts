@@ -17,6 +17,7 @@
 		0065D2ED23B410570040CA1D /* ChartsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0065D2EC23B410570040CA1D /* ChartsUITests.swift */; };
 		0065D2FB23B425E20040CA1D /* PieChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0065D2FA23B425E20040CA1D /* PieChartView.swift */; };
 		0065D2FD23B5855E0040CA1D /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0065D2FC23B5855E0040CA1D /* BaseView.swift */; };
+		0065D2FF23B975180040CA1D /* DonutChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0065D2FE23B975180040CA1D /* DonutChartView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		0065D2EE23B410570040CA1D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0065D2FA23B425E20040CA1D /* PieChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChartView.swift; sourceTree = "<group>"; };
 		0065D2FC23B5855E0040CA1D /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		0065D2FE23B975180040CA1D /* DonutChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonutChartView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 				0065D2CB23B410550040CA1D /* ViewController.swift */,
 				0065D2FC23B5855E0040CA1D /* BaseView.swift */,
 				0065D2FA23B425E20040CA1D /* PieChartView.swift */,
+				0065D2FE23B975180040CA1D /* DonutChartView.swift */,
 				0065D2CD23B410550040CA1D /* Main.storyboard */,
 				0065D2D323B410570040CA1D /* Assets.xcassets */,
 				0065D2D523B410570040CA1D /* LaunchScreen.storyboard */,
@@ -267,6 +270,7 @@
 			files = (
 				0065D2FB23B425E20040CA1D /* PieChartView.swift in Sources */,
 				0065D2CC23B410550040CA1D /* ViewController.swift in Sources */,
+				0065D2FF23B975180040CA1D /* DonutChartView.swift in Sources */,
 				0065D2FD23B5855E0040CA1D /* BaseView.swift in Sources */,
 				0065D2CA23B410550040CA1D /* AppDelegate.swift in Sources */,
 				0065D2D223B410550040CA1D /* Charts.xcdatamodeld in Sources */,

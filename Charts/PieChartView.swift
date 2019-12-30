@@ -17,20 +17,23 @@ class PieChartView: BaseView {
     var totalSum = Double()
     var runningSum = Double()
     
-    /*override init() {
-        super.init()
-    }*/
-    
-
-    
+    /**
+     * Initializer for PieChartView.
+     * @param radius - the radius of the pie chart.
+     * @param x - the x-coordinate on which the pie chart is centered.
+     * @param y - the y-coordinate on which the pie chart is centered.
+     * @param data - numbers used to calculate the slice sizes of pie chart.
+     * @param colors - the colors that will be used for each data slice in the pie chart.
+     * @param lineWidth - the width of the separating lines between each slice.
+     */
     public init(radius: Double, x: Double, y: Double, data: [Double], colors: [UIColor], lineWidth: Double) {
+        
         super.init()
 
         totalSum = data.reduce(0, +)
         var startAngle: CGFloat = CGFloat(0).radians()
         
         for (index, color) in colors.enumerated() {
-            
             let piePath = UIBezierPath()
             let center = CGPoint(x: x, y: y)
 

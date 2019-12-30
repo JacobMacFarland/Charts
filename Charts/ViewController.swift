@@ -23,7 +23,7 @@ class ViewController: UIViewController {
         let centerX = Double(self.view.frame.width / 2)
         let centerY = Double(self.view.frame.height / 2)
  
-        let pieChart = PieChartView(radius: 150, x: centerX, y: centerY, data: data, colors: pieColors, lineWidth: 1)
+        let pieChart = DonutChartView(radius: 150, x: centerX, y: centerY, data: data, colors: pieColors, lineWidth: 1, innerRadius: 120)
         self.view.addSubview(pieChart)
     }
 
