@@ -13,7 +13,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        let pieColors = [UIColor.init(rgb: 0x003f5c),
+        /*let pieColors = [UIColor.init(rgb: 0x003f5c),
                          UIColor.init(rgb: 0x58508d),
                          UIColor.init(rgb: 0xbc5090),
                          UIColor.init(rgb: 0xff6361),
@@ -24,7 +24,10 @@ class ViewController: UIViewController {
         let centerY = Double(self.view.frame.height / 2)
  
         let pieChart = PieChartView(radius: 150, x: centerX, y: centerY, data: data, colors: pieColors, lineWidth: 2.5)
-        self.view.addSubview(pieChart)
+        self.view.addSubview(pieChart)*/
+        
+        let lineChart = LineChartView(x: 150, y: 55, height: 275, width: 675, data: [50, 30, 20, 10])
+        self.view.addSubview(lineChart)
     }
 
 
