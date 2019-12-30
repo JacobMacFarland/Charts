@@ -6,4 +6,4 @@ A simple charts library
 
 
 ### DonutChart - A simple donut chart view. 
-![Image of Donut Chart View](https://raw.github.com/JacobMacFarland/Charts/master/DonutChartView.png=250x450)
+![Image of Donut Chart View](https://raw.github.com/JacobMacFarland/Charts/master/DonutChartView.png =250x450)
