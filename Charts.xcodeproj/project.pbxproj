@@ -19,6 +19,7 @@
 		0065D2FD23B5855E0040CA1D /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0065D2FC23B5855E0040CA1D /* BaseView.swift */; };
 		0065D2FF23B975180040CA1D /* DonutChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0065D2FE23B975180040CA1D /* DonutChartView.swift */; };
 		0065D30123BAB14A0040CA1D /* LineChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0065D30023BAB14A0040CA1D /* LineChartView.swift */; };
+		0065D30523BC02DB0040CA1D /* BaseGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0065D30423BC02DB0040CA1D /* BaseGraphView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		0065D2FC23B5855E0040CA1D /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		0065D2FE23B975180040CA1D /* DonutChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonutChartView.swift; sourceTree = "<group>"; };
 		0065D30023BAB14A0040CA1D /* LineChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineChartView.swift; sourceTree = "<group>"; };
+		0065D30423BC02DB0040CA1D /* BaseGraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseGraphView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 				0065D2FC23B5855E0040CA1D /* BaseView.swift */,
 				0065D2FA23B425E20040CA1D /* PieChartView.swift */,
 				0065D30023BAB14A0040CA1D /* LineChartView.swift */,
+				0065D30423BC02DB0040CA1D /* BaseGraphView.swift */,
 				0065D2FE23B975180040CA1D /* DonutChartView.swift */,
 				0065D2CD23B410550040CA1D /* Main.storyboard */,
 				0065D2D323B410570040CA1D /* Assets.xcassets */,
@@ -277,6 +280,7 @@
 				0065D30123BAB14A0040CA1D /* LineChartView.swift in Sources */,
 				0065D2FD23B5855E0040CA1D /* BaseView.swift in Sources */,
 				0065D2CA23B410550040CA1D /* AppDelegate.swift in Sources */,
+				0065D30523BC02DB0040CA1D /* BaseGraphView.swift in Sources */,
 				0065D2D223B410550040CA1D /* Charts.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
