@@ -26,20 +26,7 @@ class LineChartView: BaseView {
                            (x: 6, y: 99), (x: 7, y: 99),
                            (x: 8, y: 300), (x: 9, y: 55),
                            (x: 10, y: 88), (x: 11, y: 125)]
-        
-        
-        let mainYPath = UIBezierPath(rect: CGRect(x: x, y: y, width: 1, height: height))
-        let mainYLayer = CAShapeLayer()
-        mainYLayer.path = mainYPath.cgPath
-        mainYLayer.strokeColor = graphColor
-        mainYLayer.fillColor = graphColor
-        
-        let mainXPath = UIBezierPath(rect: CGRect(x: x, y: y + height, width: width, height: 1))
-        let mainXLayer = CAShapeLayer()
-        mainXLayer.path = mainXPath.cgPath
-        mainXLayer.strokeColor = graphColor
-        mainXLayer.fillColor = graphColor
-        
+
         
         for i in 0...numYTicks {
             let currYLevel = y + Double(i) / Double(numYTicks) * height
@@ -81,10 +68,7 @@ class LineChartView: BaseView {
             self.layer.addSublayer(xTickLayer)
             self.layer.addSublayer(xtickName)
         }
-        
-        self.layer.addSublayer(mainYLayer)
-        self.layer.addSublayer(mainXLayer)
-        
+                
         for (index, coordinate) in coordinates.enumerated() {
             
             let graphXCoord = Double(coordinate.x) / 11.0 * width + x

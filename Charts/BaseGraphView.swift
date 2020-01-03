@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 
 class BaseGraphView: BaseView {
+    
     public init(x: Double, y: Double, width: Double, height: Double, axesColor: CGColor) {
         super.init()
         
