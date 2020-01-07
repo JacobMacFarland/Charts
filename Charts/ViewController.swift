@@ -14,7 +14,9 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         // let lineChart = LineChartView(x: 150, y: 55, height: 275, width: 675, data: [50, 30, 20, 10])
-        let baseGraph = BaseGraphView(x: 150, y: 55, width: 675, height: 275, axesColor: UIColor.init(rgb: 0xE5E5E5).cgColor)
+        let baseGraph = BaseGraphView(x: 150, y: 55, width: 675,
+                                      height: 275, axesColor: UIColor.init(rgb: 0xE5E5E5).cgColor,
+                                      numYTicks: 10, numXTicks: 10, yTickNames: [""], xTickNames: [""])
         self.view.addSubview(baseGraph)
     }
 

@@ -13,11 +13,6 @@ class LineChartView: BaseView {
     public init (x: Double, y: Double, height: Double, width: Double, data: [Double]) {
         super.init()
         
-        let graphColor = UIColor.init(rgb: 0xE5E5E5).cgColor
-        
-        let numYTicks = 4
-        let numXTicks = 11
-        
         let months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
         let data = ["0", "100", "200", "300", "400"]
         let coordinates = [(x: 0, y: 75), (x: 1, y: 20),
@@ -28,47 +23,6 @@ class LineChartView: BaseView {
                            (x: 10, y: 88), (x: 11, y: 125)]
 
         
-        for i in 0...numYTicks {
-            let currYLevel = y + Double(i) / Double(numYTicks) * height
-            // let yTickPath = UIBezierPath(rect: CGRect(x: x - 5, y: currYLevel, width: 5, height: 1))
-            let yTickPath = UIBezierPath(rect: CGRect(x: x, y: currYLevel, width: width, height: 1))
-
-            let yTickLayer = CAShapeLayer()
-            yTickLayer.path = yTickPath.cgPath
-            yTickLayer.strokeColor = graphColor
-            yTickLayer.fillColor = graphColor
-            
-            let yTickName = CATextLayer()
-            yTickName.string = data[numYTicks - i]
-            yTickName.fontSize = CGFloat(14)
-            yTickName.foregroundColor = UIColor.darkGray.cgColor
-            yTickName.alignmentMode = CATextLayerAlignmentMode.center
-            yTickName.frame = CGRect(x: x - 40, y: currYLevel - 20.0 / 2.0, width: 25, height: 20)
-            
-            self.layer.addSublayer(yTickName)
-            self.layer.addSublayer(yTickLayer)
-        }
-        
-        for i in 0...numXTicks {
-            let currXLevel = x + Double(i) / Double(numXTicks) * width
-            let xTickPath = UIBezierPath(rect: CGRect(x: currXLevel, y: y + height, width: 1, height: 5))
-            
-            let xTickLayer = CAShapeLayer()
-            xTickLayer.path = xTickPath.cgPath
-            xTickLayer.strokeColor = graphColor
-            xTickLayer.fillColor = graphColor
-            
-            let xtickName = CATextLayer()
-            xtickName.string = months[i]
-            xtickName.fontSize = CGFloat(14)
-            xtickName.foregroundColor = UIColor.darkGray.cgColor
-            xtickName.alignmentMode = CATextLayerAlignmentMode.center
-            xtickName.frame = CGRect(x: currXLevel - 25.0 / 2.0, y: y + height + 18, width: 25, height: 20)
-            
-            self.layer.addSublayer(xTickLayer)
-            self.layer.addSublayer(xtickName)
-        }
-                
         for (index, coordinate) in coordinates.enumerated() {
             
             let graphXCoord = Double(coordinate.x) / 11.0 * width + x
@@ -91,9 +45,6 @@ class LineChartView: BaseView {
             dataPointLayer.lineWidth = CGFloat(1)
             
             self.layer.addSublayer(dataPointLayer)
-        }
-    
-
-        
+        } 
     }
 }
