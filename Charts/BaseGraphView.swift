@@ -92,6 +92,10 @@ class BaseGraphView: BaseView {
         }*/
     }
     
+    /**
+     * Draw graph major axes with tick marks and labels.
+     *
+     */
     override func draw(_ rect: CGRect) {
         super.draw(rect)
         context = UIGraphicsGetCurrentContext()

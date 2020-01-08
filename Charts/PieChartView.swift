@@ -62,6 +62,10 @@ class PieChartView: BaseView {
     }
 }
 
+/**
+ * Extension for converting CGFloats to radians.
+ * @returns radians representation. 
+ */
 extension CGFloat {
     func radians() -> CGFloat {
         let b = CGFloat(Double.pi) * (self/180)
