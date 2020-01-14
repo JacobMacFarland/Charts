@@ -33,6 +33,7 @@ class BaseGraphView: BaseView {
         // --------------------
         
         super.init()
+        draw(CGRect(x: x, y: y, width: width, height: height))
         
         /*let yAxisPath = UIBezierPath(rect: CGRect(x: x, y: y, width: 1, height: height))
         
